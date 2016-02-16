@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 
 import uuid
-import getopt
 
 from M3Utility.RDFGraphGenerator import *
 # from Utility.SubscriptionPerformanceTest import *
@@ -12,11 +11,14 @@ from M3Utility.Utility import SmartSpaceData
 from time import sleep
 from M3Core.m3_kp import *
 
-import sys, os
+import sys, os, getopt
 
 
 #foaf http://xmlns.com/foaf/spec/index.rdf
+
+# Menu actions list
 menu_actions = {}
+
 #
 # Main menu functions
 #
@@ -24,7 +26,7 @@ def main_menu():
     os.system('clear')
 
     print 'Welcome to GCSS CLI tool'
-    print 'Please choose one point of menu or use command line parameters'
+    print 'Please choose one menu point or use command line parameters'
     print '1. Menu 1'
     print '2. Menu 2'
     print '\n0. Quit'
@@ -79,40 +81,42 @@ menu_actions = {
     '0': exit
 }
 
+#
+# Command line parameters
+def cli_menu(argv):
+    # file = ''
+    try:
+        opts, args = getopt.getopt(argv, "hiallalor", "[help]")
+    except getopt.GetoptError as msg:
+        print(msg)
+        print("for Help using --help")
+        sys.exit(2)
+    #
+    for opt, arg in opts:
+        # TODO change to switch
+        if opt in ("-h", "--help"):
+            print('... HELP ...')
+            sys.exit(0)
+        elif opt in ("-i", "--hello"):
+            print("Hello!")
+        elif opt in ("-al", "--alt"):
+            alt = arg
+            print("Altitude: "+alt)
+        elif opt in ("-la", "--lat"):
+            lat = arg
+            print("Latitude: "+lat)
+        elif opt in ("-lo", "--lon"):
+            lon = arg
+            print("Longitude: "+lon)
+        elif opt in ("-r", "--radius"):
+            radius = arg
+            print("Radius: "+radius)
+
 
 #
 # MAIN
 #
 if __name__ == "__main__":
 
-    main_menu()
-
-
-
-
-
-#
-# TODO: Add command line parameters
-#
-'''
-def main(argv: None):
-
-    try:
-        opts, args = getopt(sys.argv[1:], "h", "[help]")
-    except getopt.error as msg:
-        print(msg)
-        print("for Help using --help")
-        sys.exit(2)
-    #
-    for o, a in opts:
-        if o in ("-h", "--help"):
-            print(__doc__)
-            sys.exit(0)
-    # analyse
-    for arg in args:
-        print("Hello!")
-        # process(arg) # process in other place
-
-if __name__ == "__main__":
-    main("-h")
-'''
+    cli_menu(sys.argv[1:])
+    #main_menu()
