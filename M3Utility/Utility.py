@@ -1,7 +1,6 @@
 from M3Core.m3_kp import *
 
 class SmartSpaceData:
-   
     def __init__(self):
         self.SmartSpaceName = " "
         self.IPADDR = "127.0.0.1"

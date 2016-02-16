@@ -1,2 +1,2 @@
-examples/geomongo_pyrequests/.idea/**
-
+.idea/**
+*.pyc

@@ -7,6 +7,8 @@ Geo2Tag GeoMongo HTTP requests.
 
 ## Source
 
+* GCSSCore - gcss core, main methods
+* GeoMongo - Ge2Tag Core (HTTP/REST requests)
 * M3Core - Smart-M3 Python Core API
 * M3Utility - Additional Smart-M3 Python API
 * M3Tests - Smart-M3 examples
@@ -15,13 +17,17 @@ Geo2Tag GeoMongo HTTP requests.
 ## Installation
 
 * Install all additional packages for the platforms;
-* Install last version of Smart-M3 with M3 Python API;
+* Install last version of Smart-M3 with M3 Python API; Use Virtuoso storage for high performance.
 * Install Geo2Tag GeoMongo platform
 
 ## Launch
 
-* redsib daemon: redsibd --storage-virtuoso-p=="dsn='VOS', host='127.0.0.1', user='dba', password='virtuoso'"
-* sib-tcp
+* Launch Geo2Tag platform: ./local_deploy.sh or ./oauth_test_local_deploy.sh
+* Launch Smart-M3: redsibd --storage-virtuoso-p=="dsn='VOS', host='127.0.0.1', user='dba', password='virtuoso'" && sib-tcp
+
+## pyGCSS commands
+
+TODO
 
 ## Links
  
