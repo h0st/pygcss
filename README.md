@@ -17,8 +17,8 @@ Geo2Tag GeoMongo HTTP requests.
 ## Installation
 
 * Install all additional packages for the platforms;
-* Install last version of Smart-M3 with M3 Python API; Use Virtuoso storage for high performance.
-* Install Geo2Tag GeoMongo platform
+* Install last version of Smart-M3 with M3 Python API; Use Virtuoso storage for high performance;
+* Install Geo2Tag GeoMongo platform;
 
 ## Launch
 
@@ -32,5 +32,5 @@ TODO
 ## Links
  
 * Smart-M3 sources: https://github.com/smart-m3
-* Smart-M3 sourceforge: 
+* Smart-M3 sourceforge: https://sourceforge.net/projects/smart-m3
 * Geo2Tag GeoMongo sources: https://bitbucket.org/osll/geomongo
